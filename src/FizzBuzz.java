@@ -7,7 +7,7 @@ class FizzBuzz {
 
         int x = 1;
         while (x < 100) {
-            extracted(x);
+            doFizzBuzz(x);
             x++;
         }
 
@@ -16,7 +16,7 @@ class FizzBuzz {
         }
     }
 
-    private static void extracted(int x) {
+    public static void doFizzBuzz(int x) {
         boolean divisibleBy3 = x % 3 == 0;
         boolean divisibleBy5 = x % 5 == 0;
         if (divisibleBy3 && divisibleBy5) {
