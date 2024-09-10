@@ -1,17 +1,20 @@
 public class Multiples {
 
-    private static int count = 0; // starting from 0
-
-    public static void main(String[] args) {
-        calculateUsingLoop();
-        System.out.println(count);
+    public static int main() {
+        return multiples(1000, 3, 5);
     }
 
-    private static void calculateUsingLoop() {
-        for (int i = 1; i < 1000; i++) {
-            if (i % 3 == 0 || i % 5 == 0) {
+    public static int main(int limit, int divisor1, int divisor2) {
+        return multiples(limit, divisor1, divisor2);
+    }
+
+    private static int multiples(int limit, int divisor1, int divisor2) {
+        int count = 0;
+        for (int i = 1; i < limit; i++) {
+            if (i % divisor1 == 0 || i % divisor2 == 0) {
                 count += 1;
             }
         }
+        return count;
     }
 }
