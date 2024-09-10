@@ -10,7 +10,9 @@ public class Reduce {
     private static void reduce(int n) {
         if (n == 0) {
             return;
-        } else if (n % 2 == 0) {
+        }
+
+        if (n % 2 == 0) {
             n /= 2;
             steps++;
             reduce(n);
